@@ -1,12 +1,24 @@
+:root {
+    --color-text: #94a3b8;
+    --color-highlight: #5eead4;
+    --color-background: #0f172a;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    transition-duration: 200ms;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 1.5rem;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
 }
 
 #navbar {
@@ -14,15 +26,21 @@ html {
     top: 0;
     display: flex;
     justify-content: flex-end;
-    background-color: yellow;
     width: 100%;
     gap: 1rem;
     padding: 1rem;
+    z-index: 5;
+    background-color: var(--color-background);
+    border-bottom: 2px solid var(--color-highlight);
 }
 
-#navbar a {
+a {
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-highlight);
 }
 
 #welcome-section {
@@ -31,7 +49,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: pink;
     gap: 2rem;
 }
 
@@ -47,8 +64,34 @@ html {
     padding: 4rem;
 }
 
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 400px;
+    border: 1px solid var(--color-highlight);
+    padding: 1rem;
+}
+
+.project-title {
+    text-align: center;
+}
+.anchor-icon {
+    padding-left: 0.5rem;
+}
+
+.project-title:hover .anchor-icon {
+    padding-left: 1rem;
+}
+
+
 #contact-me {
-    background-color: cyan;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -64,14 +107,18 @@ html {
     align-items: center;
 }
 
-#projects {
-    background-color: green;
+footer p {
+    text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
 
-}
+    #contact-links {
+        flex-direction: row;
+    }
 
-@media (max-width: 1048px) {
+    .project-tile {
+        width: 600px;
+    }
 
 }
