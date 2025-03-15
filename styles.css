@@ -2,15 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid black;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 #navbar {
     position: fixed;
     top: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: yellow;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
 }
 
 #welcome-section {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    gap: 2rem;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+#contact-me {
+    background-color: cyan;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#projects {
+    background-color: green;
 }
 
 @media (max-width: 640px) {
